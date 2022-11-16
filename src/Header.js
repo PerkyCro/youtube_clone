@@ -6,6 +6,7 @@ import VideoCallSharpIcon from "@mui/icons-material/VideoCallSharp";
 import AppsSharpIcon from "@mui/icons-material/AppsSharp";
 import NotificationsSharpIcon from "@mui/icons-material/NotificationsSharp";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
+import { Avatar } from "@mui/material";
 
 function Header() {
   return (
@@ -23,7 +24,7 @@ function Header() {
       <VideoCallSharpIcon />
       <AppsSharpIcon />
       <NotificationsSharpIcon />
-      <AccountCircleSharpIcon
+      <Avatar
         alt="Marin P"
         src="https://assets.reedpopcdn.com/god-of-war-walkthrough-guide-5004-1642178551828.jpg/BROK/thumbnail/1200x1200/quality/100/god-of-war-walkthrough-guide-5004-1642178551828.jpg"
       />
