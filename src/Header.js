@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
@@ -8,6 +8,8 @@ import NotificationsSharpIcon from "@mui/icons-material/NotificationsSharp";
 import { Avatar } from "@mui/material";
 
 function Header() {
+  const [inputSearch, setInputSearch] = useState("");
+
   return (
     <div className="header">
       <div className="header_left">
@@ -19,7 +21,12 @@ function Header() {
         />
       </div>
       <div className="header_center">
-        <input placeholder="Search" type="text" />
+        <input
+          onChange={(e) => setInputSearch(e.target.value)}
+          value={inputSearch}
+          placeholder="Search"
+          type="text"
+        />
         <SearchSharpIcon className="header_inputButton" />
       </div>
       <div className="header_right">
