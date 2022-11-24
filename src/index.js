@@ -3,8 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./Header";
+import SearchPage from "./SearchPage";
+import Sidebar from "./Sidebar";
 
 const router = createBrowserRouter([
   {
@@ -16,9 +18,28 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Header />
-        <h1>Search Page</h1>
+        <div className="app_page">
+          <Sidebar />
+          <SearchPage />
+        </div>
       </div>
     ),
+  },
+  {
+    path: "*",
+    element: (
+      <div>
+        <Header />
+        <div className="app_page">
+          <Sidebar />
+          <SearchPage />
+        </div>
+      </div>
+    ),
+  },
+  {
+    path: "/search/abc",
+    element: <p>abb</p>,
   },
 ]);
 
