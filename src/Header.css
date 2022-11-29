@@ -38,6 +38,10 @@
   border: none;
 }
 
+.header_center > input:focus {
+  outline: none;
+}
+
 .header_right {
   display: flex;
   align-items: center;
